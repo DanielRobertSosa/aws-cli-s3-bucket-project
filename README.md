@@ -61,7 +61,8 @@ Each step includes clear explanations and screenshot placeholders to document th
    - `AmazonS3FullAccess`  
      > In real production environments, you would assign only the minimum required permissions.
 
-📸 **Screenshot 1 – IAM User Created (no secrets shown)**  
+<img width="1909" height="682" alt="1 - CLI USER CREATED " src="https://github.com/user-attachments/assets/bc27340a-37d3-4d52-b30b-4add7edd684d" />
+
 
 
 ---
@@ -76,11 +77,9 @@ To allow the AWS CLI to authenticate as this user, an access key must be generat
 - Scroll to **Access keys**.
 - Click **Create access key**.
 - Select **Command Line Interface (CLI)** as the use case.
-- Download the `.csv` file containing the Access Key ID and Secret Access Key.  
-  *(The secret key is never shown publicly or stored in GitHub.)*
+- Download the `.csv` file containing the Access Key ID and Secret Access Key.
 
-📸 **Screenshot 2 – Access Key Created (Access Key ID only, no secret key)**  
-
+<img width="1589" height="608" alt="2  set permission  " src="https://github.com/user-attachments/assets/57d7d02b-814f-450f-91ba-c6b0878ed5db" />
 
 ---
 
@@ -114,7 +113,7 @@ Once configuration was completed, authentication was verified by requesting the 
   - IAM User ID  
 - This output contains no sensitive information and is safe to include in documentation.
 
-📸 **Screenshot 3 – STS Caller Identity (safe to upload)**  
+<img width="731" height="253" alt="3   STEP 7 — Verify the AWS CLI is Authenticated" src="https://github.com/user-attachments/assets/3999e239-353f-49dd-977d-e5b218157131" />
 
 ## 🪣 3. Create an S3 Bucket Using the AWS CLI
 
@@ -143,8 +142,7 @@ This ensures compatibility across all AWS regions and services.
 Using the AWS CLI, the bucket was created with a single command.  
 This action provisions a new S3 bucket in the default region configured earlier (`us-east-1`).
 
-📸 **Screenshot 4 – S3 Bucket Created (CLI output)**  
-
+<img width="549" height="130" alt="4  s3 bucket made" src="https://github.com/user-attachments/assets/bd1ba3a3-0b7b-437d-834f-dac3ccedf4d0" />
 
 ---
 
@@ -158,7 +156,7 @@ The newly created bucket should appear in this list alongside any other existing
 - The bucket was created in your account  
 - Your IAM permissions are working as intended  
 
-📸 **Screenshot 5 – List of S3 Buckets (includes new bucket)**  
+<img width="627" height="242" alt="5 - VERIFY BUCKET EXERCISE 3" src="https://github.com/user-attachments/assets/6f6699f7-ff88-4c1c-9846-b7d890c162b5" />
 
 ## 📄 4. Upload a File to the S3 Bucket
 
@@ -177,8 +175,7 @@ A simple text file was created locally to serve as the object to upload into the
 
 This file will be uploaded to the S3 bucket created in Section 3.
 
-📸 **Screenshot 6 – Test File Created and Ready for Upload**  
-*(Screenshot of the command and local file creation)*  
+<img width="814" height="234" alt="6  CREATE TEST FILE" src="https://github.com/user-attachments/assets/3ea8925a-db37-46f4-a527-7eac6c0426e0" />
 
 
 ---
@@ -191,8 +188,7 @@ With the local file created, the next step is to upload it to the bucket:
 - The file is stored at the bucket’s root level  
 - Successful uploads return confirmation in the terminal
 
-📸 **Screenshot 7 – File Uploaded to S3 (CLI output)**  
-
+<img width="789" height="151" alt="7  VERIFY TEST FILE EXIST" src="https://github.com/user-attachments/assets/ee0ac604-3b86-4a5c-9660-d73bfef1e2ed" />
 
 ---
 
@@ -205,8 +201,6 @@ After uploading, the contents of the bucket were listed to verify that the objec
 - The file exists inside your bucket
 - Your IAM permissions allow object-level access
 - The AWS CLI is communicating correctly with S3
-
-📸 **Screenshot 8 – File Listed in S3 Bucket**  
 
 ## 🧹 5. Clean Up: Remove the S3 Object and Delete the Bucket
 
@@ -234,6 +228,9 @@ In this step, the previously uploaded `test.txt` file is deleted.
 
 With the bucket empty, the next step is to delete the bucket itself.
 
+<img width="652" height="97" alt="8 - CLEAN UP" src="https://github.com/user-attachments/assets/d0d2acf3-9ab4-43b5-a18d-997e1c5d2cf7" />
+
+
 **Steps performed:**
 - Ran the AWS CLI command that removes the bucket
 - Confirmed the command forces deletion even if versions or markers exist
@@ -243,8 +240,6 @@ With the bucket empty, the next step is to delete the bucket itself.
 - Demonstrates full resource lifecycle management  
 - Ensures no lingering AWS resources remain after testing  
 - Reinforces responsible cloud usage practices  
-
-📸 **Screenshot 10 – S3 Bucket Deleted (CLI output)**  
 
 ## 🎓 6. Learning Outcomes & Conclusion
 
